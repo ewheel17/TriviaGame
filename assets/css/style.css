@@ -1,0 +1,17 @@
+body {
+    background-color:powderblue;
+}
+
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+.highlight {
+    background-color: gold;
+    font-size: 30px;
+}
