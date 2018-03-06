@@ -137,11 +137,12 @@ $(".goodMove").click(function(){
 function timeOut() {
     totalUnans++;
     $(a).hide();
-    gameNum++;
 
     $("#afterBox1").show();
     $("#afterBox2").show();
+    $("#trueAnswer").html("The correct answer was: <h3>" + correctAnswers[gameNum - 1] + "</h3>");
     $(".afterPicture").html('<img src="assets/images/' + thePics[gameNum - 1] + '.jpg" style="height:200px;">');
+    gameNum++;
 
     clearInterval(intervalId);
     timer = 30;
