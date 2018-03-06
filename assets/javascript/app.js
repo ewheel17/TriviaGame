@@ -5,6 +5,8 @@ var gameNum;
 var a;
 var timer;
 var intervalId;
+var correctAnswers = ["Alan Turing", "John Atanasoff", "Bill Gates", "Ada Lovelace", "Steve Jobs", "Mary Keller", "Intelligent Business Marketing",
+ "Star Trek II: The Wrath of Khan", "Completely Automated Public Turing test to tell Computers and Humans Apart", "UNIVAC"]
 
 // Starts the game by setting the values and beginning the question "cycle".
 function startGame() {
@@ -71,10 +73,11 @@ function timeConvert(t) {
 $(".badMove").click(function(){
     totalLoss++;
     $(a).hide();
-    gameNum++;
 
     $("#afterBox1").show();
     $("#afterBox2").show();
+    $("#trueAnswer").html("The correct answer was: <h3>" + correctAnswers[gameNum - 1] + "</h3>")
+    gameNum++;
 
     clearInterval(intervalId);
     timer = 30;
@@ -95,16 +98,16 @@ $(".badMove").click(function(){
         } else {
             cycleGame();
         }
-    }, 1000);
+    }, 4000);
 })
 
 $(".goodMove").click(function(){
     totalWin++;
     $(a).hide();
-    gameNum++;
 
     $("#afterBox1").show();
     $("#afterBox3").show();
+    gameNum++;
 
     clearInterval(intervalId);
     timer = 30;
@@ -125,7 +128,7 @@ $(".goodMove").click(function(){
         } else {
             cycleGame();
         }
-    }, 1000);
+    }, 4000);
 })
 
 function timeOut() {
