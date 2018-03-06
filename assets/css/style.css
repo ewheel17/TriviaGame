@@ -1,5 +1,5 @@
 body {
-    background-color:powderblue;
+    background-color:gray;
 }
 
 .row {
@@ -9,6 +9,7 @@ body {
 
 h1 {
     font-size: 60px;
+    font-family: 'Play', sans-serif;
 }
 
 .highlight {
@@ -16,9 +17,15 @@ h1 {
     font-size: 30px;
 }
 
+.bord-color {
+    border-color: blueviolet !important;
+    color: blueviolet !important;
+}
+
 .titleBar {
     background-color: blueviolet !important;
     color: white;
+    /* font-family: 'PT Sans Caption', sans-serif;  */
 }
 
 .ans1, .ans2, .ans3, .ans4 {
