@@ -6,8 +6,9 @@ var a;
 var timer;
 var intervalId;
 var correctAnswers = ["Alan Turing", "John Atanasoff", "Bill Gates", "Ada Lovelace", "Steve Jobs", "Mary Keller", "Intelligent Business Marketing",
- "Star Trek II: The Wrath of Khan", "Completely Automated Public Turing test to tell Computers and Humans Apart", "UNIVAC"]
+ "Star Trek II: The Wrath of Khan", "Completely Automated Public Turing test to tell Computers and Humans Apart", "UNIVAC"];
 
+var thePics = ["turing", "atanasov", "gates", "lovelace", "jobs", "keller", "ibm", "trek", "captcha", "univac"];
 // Starts the game by setting the values and beginning the question "cycle".
 function startGame() {
     totalWin = 0;
@@ -76,7 +77,8 @@ $(".badMove").click(function(){
 
     $("#afterBox1").show();
     $("#afterBox2").show();
-    $("#trueAnswer").html("The correct answer was: <h3>" + correctAnswers[gameNum - 1] + "</h3>")
+    $("#trueAnswer").html("The correct answer was: <h3>" + correctAnswers[gameNum - 1] + "</h3>");
+    $(".afterPicture").html("<img src='assets/images/" + thePics[gameNum - 1] + ".jpg' style='height:200px;'>");
     gameNum++;
 
     clearInterval(intervalId);
@@ -107,6 +109,7 @@ $(".goodMove").click(function(){
 
     $("#afterBox1").show();
     $("#afterBox3").show();
+    $(".afterPicture").html('<img src="assets/images/' + thePics[gameNum - 1] + '.jpg" style="height:200px;">');
     gameNum++;
 
     clearInterval(intervalId);
@@ -138,6 +141,7 @@ function timeOut() {
 
     $("#afterBox1").show();
     $("#afterBox2").show();
+    $(".afterPicture").html('<img src="assets/images/' + thePics[gameNum - 1] + '.jpg" style="height:200px;">');
 
     clearInterval(intervalId);
     timer = 30;
@@ -158,7 +162,7 @@ function timeOut() {
         } else {
             cycleGame();
         }
-    }, 1000);
+    }, 4000);
 }
 // ----------------------------------------------------------
 
