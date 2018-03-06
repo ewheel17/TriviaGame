@@ -15,3 +15,12 @@ h1 {
     background-color: gold;
     font-size: 30px;
 }
+
+.titleBar {
+    background-color: blueviolet !important;
+    color: white;
+}
+
+.ans1, .ans2, .ans3, .ans4 {
+    cursor:pointer;
+}
